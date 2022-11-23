@@ -25,10 +25,11 @@ if __name__ == "__main__":
 
                 if args[1] == '-c':
                     print('Запуск клиента...')
-                    os.system(f'client.py {server_ip} {server_port}')
+                    os.system(f'python client.py {server_ip} {server_port}')
                 else:
                     print('Запуск сервера...')
-                    os.system(f'server.py {server_ip} {server_port}')
+
+                    os.system(f'python server.py {server_ip} {server_port}')
 
             except (ValueError, IndexError):
                 print('Ошибка: неправильная инициализация. Используйте --help для вывода справки')

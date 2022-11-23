@@ -6,9 +6,10 @@ script, host, port = sys.argv
 
 # todo: получать ip сервера автоматически
 
-while True:
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((host, int(port)))
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((host, int(port)))
+    while True:
         s.listen()
         conn, addr = s.accept()
 
